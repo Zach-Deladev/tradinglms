@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LMS Activation email:</title>
+        <metahttp-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style type="text/css">
+            body{
+                margin: 0;
+                padding: 0;
+                min-width: 100%;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                background-color: white ;
+                color: black;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            h1 {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1.25;
+                margin-top: 0;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            p {
+                margin-top: 0;
+                margin-bottom: 24px;
+                
+            }
+            table td {
+                vertical-align: top;
+
+            }
+            /* Layout */
+
+            .email-wrapper {
+               max-width: 600px;
+               margin: 0 auto;
+            }
+            .email-header {
+                background-color: blue;
+                padding: 24px;
+                color: white;
+            }
+            .email-body {
+                padding: 24px;
+                background-color: white;
+            }
+            .email-footer {
+                padding: 24px;
+                background-color: rgb(255, 255, 255);
+               
+            }
+            /* Buttoms */
+
+            .button {
+                display: inline-block;
+                background-color: blue;
+                color: white;
+                font-size: 16px;
+                font-weight: 700;
+                text-align: center;
+                text-decoration: none;
+                padding: 12px 24px;
+                border-radius: 4px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="email-wrapper">
+            <div class="email-header">
+                <h1>Activate your account</h1>
+            </div>
+            <div class="email-body">
+                <p>Hi <%= user.name %>,</p>
+                <p>Thanks for signing up for LMS! We're excited to have you as an early user.</p>
+                <p>Before you can start using LMS, you need to activate your account.</p>
+                <p>Please use the following activation code:</p>
+                <h2><%= activationCode%></h2>
+                <p>If you have any questions, just reply to this email, we're always happy to help out.</p>
+                <p>Cheers,<br>The LMS Team</p>
+            </div>
+            <div class="email-footer">
+                <p>You received this email because you signed up for LMS. If you didn't sign up, you can safely ignore this email. For any further enquiries please contact us on <a href="mailto:zach.delapenha.developer@gmail.com">zach.delapenha.developer@gmail.com</a></p>
+            </div>
+        </div>
+    </body>
+</html>
